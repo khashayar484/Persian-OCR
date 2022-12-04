@@ -1,0 +1,276 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+	<script src = "https://cdn.jsdelivr.net/npm/createjs@1.0.1/builds/1.0.0/createjs.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<style>
+
+html, body {
+	width:100%; 
+	height:100%; 
+	padding:0px; 
+	margin:0px;
+    overflow: hidden;
+    background: #191d1e;
+	
+}
+
+.container{   
+    width: 100%;
+    height: 100%;
+    top: 0; right: 0; bottom: 0; left: 0;
+    /* border: 15px solid orange */
+}
+
+.button{
+	width: 200px;
+	height: 30px;
+	float:left
+}
+
+button.input_button{
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding: 7px 20px !important;
+	margin: 0px 0px 0px 20px;
+	background-color: #ff3464;
+	box-shadow:inset 0px -1px 13px 1px #f5978e;
+	border-radius:10px;
+	border:3px solid #d02718;
+	border-radius: 10px;
+	transition: 0.8s;
+	font-size:17px;
+	font-weight:bold;
+	text-decoration:none;
+	float: left;
+	color: #fff;
+	cursor:pointer;
+}
+
+button.input_button:hover{
+  background-color: rgba(255,255,255,0);
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+#custom_text{
+	float: left;
+	font-size: 15px;
+	color: white;
+	font-family: 'Times New Roman';
+	margin: 10px;
+}
+
+.column{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    margin: 20px;
+    align-items: center;   
+	    
+}
+.input{
+	width: 49%;
+	height: 100%;
+	float: left;
+	align-items: center;
+    text-align: center;
+
+}
+.prediction_result{
+	width: 49%;
+	height: 100%;
+	float: left;
+	align-items: center;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image{
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    margin: 40px;
+}
+.prt1_header{
+	width: 45%;
+    height: 20px;
+	margin: 5px;
+    float: left;
+	background-position: center;
+}
+.prt1{
+    width: 45%;
+    height: 100%;
+    margin: 10px;
+    float: left;
+	background-position: center;
+}
+.prt1_body{
+    width: 100%;
+	height: 90%;
+	float: left;
+	background-position: center;
+	object-fit: cover;
+}
+
+.prt2_body{
+    width: 100%;
+	height: 90%;
+	float: left;
+	background-position: center;
+	object-fit: fill;
+}
+
+.prt2_header{
+	width: 45%;
+    height: 20px;
+	margin: 10px;
+    float: left;
+	background-position: center;
+}
+
+.prt2{
+    width: 45%;
+    height: 100%;
+    margin: 10px;
+    float: left;
+	background-position: center;
+}
+
+
+
+</style>
+
+<body>
+    
+</body>
+    <div id = "container">
+		<div  class = "column">
+            <a style="color: white; font-family: 'Times New Roman', Times, serif; font-size:x-large">  Persian National Card Detection   </a>
+		</div>
+        <div class = "column">
+			<div class = 'input'>
+				<input type="file" id="upload_file" accept="image/jpeg, image/png, image/jpg" hidden="hidden">
+				<button type = 'button' id = 'custom_button' class = "input_button" > <a style = "font-family: 'Times New Roman', Times, serif">  CHOOSE A FILE </a></button>
+				<span id = 'custom_text'> 
+					<a>  No File chosen, yet </a>
+				</span>
+			</div>
+			<div class = 'prediction_result' id = "prediction_text">
+			</div>
+        </div>
+        <div class = "image">
+            <div class = "prt1" >
+				<div class = "prt1_header"> <a style ="color: white; font-family: 'Times New Roman', Times, serif">  input image </a> </div>
+				<div class = "prt1_body" id = "real_image" ></div>
+			</div>
+			<div class = "prt2">
+				<div class = "prt2_header"> <a style ="color: white; font-family: 'Times New Roman', Times, serif">  trim image </a> </div>
+				<div class = "prt2_body" id = 'trimed_image'> </div>
+            </div>
+        </div>
+    </div>
+</html>
+
+
+<script>
+	
+	function show_image(params) {
+		const image_input = document.querySelector("#upload_file")
+		var uploaded_image = "" 
+		const reader = new FileReader()
+		reader.addEventListener("load", ()=>{
+			uploaded_image = reader.result
+			document.querySelector("#real_image").style.backgroundImage = `url(${uploaded_image})`;
+		})
+		reader.readAsDataURL(params.files[0])
+		
+	}
+
+	function displayBase64Image(base64Image) {
+		var placeholder = $('#trimed_image');
+		placeholder.html('');
+		$('<img>', {
+			src: base64Image
+		}).appendTo(placeholder);
+	}
+	
+	function clear_Dome(params) {
+		$('#trimed_image').empty();
+		$('#prediction_text').empty();
+	}
+
+	function show_prediction_id(national_ID) {
+		var newh1 = document.createElement("h4");
+        newh1.innerHTML = "Prediction ID is " + national_ID
+		console.log(newh1.innerHTML)
+        newh1.style.color = "white"
+        newh1.style.fontFamily = "Times New Roman"
+		newh1.style.fontSize = "20px"
+		$(".prediction_result").append(newh1)
+	}
+	
+    const realfilebtn = document.getElementById("upload_file")
+    const custombtn = document.getElementById("custom_button")
+    const customtxt = document.getElementById("custom_text")
+
+	custombtn.addEventListener("click" , function() {
+	realfilebtn.click()
+	});
+	
+	
+	realfilebtn.addEventListener("change" , function(){
+	alert("change")
+	if (realfilebtn.files[0] && realfilebtn.files[0]) { // if file is real 
+		clear_Dome()
+		const file = realfilebtn.files[0] 
+		console.log(realfilebtn.files[0]['name'])
+		let formData = new FormData();
+		formData.append( "pic" ,  realfilebtn.files[0], realfilebtn.files[0]['name']);
+		// formData.append('image' , file);
+		customtxt.innerHTML = realfilebtn.files[0]['name']
+		customtxt.style.fontFamily = "times new roman"
+		show_image(realfilebtn)
+
+		$.ajax({
+			url: "/image",
+			type: 'POST',
+			processData: false, 
+			contentType: false, 
+			dataType : 'json',
+			data: formData,
+			success : function(data){ 
+				var parent_div = document.getElementById("trimed_image")
+				parent_div.style.objectFit = 'contain'
+
+				var pic = "data:image/png;base64," + data.output_image
+				var image = new Image()
+				image.id = "image_id"
+
+				image.src = pic
+				image.style.objectFit = 'contain'
+				parent_div.appendChild(image)				
+				show_prediction_id(data.national_id)
+			},
+
+		})
+	}else{
+		customtxt.innerHTML = "No File Chosen, yet."
+	}
+	});
+
+
+// https://blog.paperspace.com/deploying-deep-learning-models-flask-web-python/
+</script>
