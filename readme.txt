@@ -1,7 +1,8 @@
-Persian OCR.
-https://bulldogjob.com/readme/how-to-write-a-good-readme-for-your-github-project
+# Persian OCR.
 
-Motivation of the Project
+//https://bulldogjob.com/readme/how-to-write-a-good-readme-for-your-github-project
+
+## Motivation of the Project
 While working on a user authentication project for the National ID Card Organization, some of collected sample images could not be processed due to irregularity in size and scale. 
 To overcome the problem, images were manually corrected using CamScanner. 
 They were then cut off to be in the proper form. Repeating this process over and over is clearly a tedious task, so a simple program was written to automate it.
