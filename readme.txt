@@ -32,7 +32,7 @@ from image some flags is implemented to control if the contour is autenticated o
 altought some models like AdaBoost, KNN, Bayes with its dimensional reduction, PCA,LDA can get the good result in prediction here CNN models is used and get the 100% 
 accuracy with just afew ID card sample. for better result use another category "10" when model can't predict the number or when the incorrect inputs gets to the network
 <image accuracy per each epoch >
-
+<img>  </img>
 the model structure.
 
 . Visualziation: 
