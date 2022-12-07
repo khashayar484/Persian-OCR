@@ -34,6 +34,7 @@ accuracy with just afew ID card sample. for better result use another category "
 <image accuracy per each epoch >
 <img>  </img>
 the model structure.
+![model_prepation py_plot](https://user-images.githubusercontent.com/54494078/206300639-19479891-e7ea-4649-b9a0-44d2b4b3e03c.png)
 
 . Visualziation: 
 the entire processes are shown in html with javascript, ajax is used to transfer base64 image from server which is flask to client and viceversa.
