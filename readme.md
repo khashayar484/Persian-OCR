@@ -8,6 +8,7 @@ To overcome the problem, images were manually corrected using CamScanner.
 They were then cut off to be in the proper form. Repeating this process over and over is clearly a tedious task, so a simple program was written to automate it.
 
 Titles and internal titles : Persian National ID detection 
+![OCR_me](https://user-images.githubusercontent.com/54494078/206193822-95c7348e-ef3f-405e-8295-ae8050f3e367.jpg)
 
 this project aim to get ID code from perisan national ID the main problem is that national ID may not locate in desire angle so first of all we need align the card then get the 
 ID number from it after than CNN model predict the national number.
