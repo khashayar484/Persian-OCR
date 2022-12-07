@@ -21,7 +21,7 @@ Consider also using additional elements such as:
 Table of contents
 
 . Frame detection: rotation, get alpha, find
- 	
+
 because images can be placed anywhere therfore first we need to align the frame then crop the ID number based on its location. to do this 
 after inverting the image BGR2GRAY with OpenCv then grab the largest contour which is ID card's frame, and align the frame which gets from 
 the conjuction between edge and the center, as i get this method is more precisly than aligning ID card by a face who ID card belong to. especialy when 
