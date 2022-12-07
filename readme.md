@@ -7,6 +7,7 @@ Titles and internal titles : Persian National ID detection
 ![OCR_me](https://user-images.githubusercontent.com/54494078/206193822-95c7348e-ef3f-405e-8295-ae8050f3e367.jpg)
 ![OCR_3](https://user-images.githubusercontent.com/54494078/206299575-fc1d12c2-2ed8-48f4-a7c1-120481ee449a.jpg)
 
+![OCR_1](https://user-images.githubusercontent.com/54494078/206299845-3e1d01cf-a29a-4c13-a458-ef120de4c1f7.jpg)
 
 
 
