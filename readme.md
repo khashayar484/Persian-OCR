@@ -10,7 +10,8 @@ They were then cut off to be in the proper form. Repeating this process over and
 Titles and internal titles : Persian National ID detection 
 ![OCR_me](https://user-images.githubusercontent.com/54494078/206193822-95c7348e-ef3f-405e-8295-ae8050f3e367.jpg)
 
-this project aim to get ID code from perisan national ID the main problem is that national ID may not locate in desire angle so first of all we need align the card then get the 
+this project aim to get national ID code from its images the main problem is that the national ID can be located anywhere on a paper with irrgular size and scale, so here, first try to locate frame of the card, carop it scale and then get the ID numbers.
+
 ID number from it after than CNN model predict the national number.
 
 Introduction - the project's aim
@@ -19,10 +20,9 @@ Launch
 
 Consider also using additional elements such as: 
 
-Table of contents
+#Table of contents
 
 . Frame detection: rotation, get alpha, find
-
 because images can be placed anywhere therfore first we need to align the frame then crop the ID number based on its location. to do this 
 after inverting the image BGR2GRAY with OpenCv then grab the largest contour which is ID card's frame, and align the frame which gets from 
 the conjuction between edge and the center, as i get this method is more precisly than aligning ID card by a face who ID card belong to. especialy when 
