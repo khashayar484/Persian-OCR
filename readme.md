@@ -1,16 +1,12 @@
 # Persian OCR.
-
-//https://bulldogjob.com/readme/how-to-write-a-good-readme-for-your-github-project
+this project aim to get national ID code from its images the main problem is that the national ID can be located anywhere on a paper with irrgular size and scale, so here, first try to locate frame of the card, carop it scale and then get the ID numbers.
 
 ## Motivation of the Project
-While working on a user authentication project for the National ID Card Organization, some of collected sample images could not be processed due to irregularity in size and scale. 
-To overcome the problem, images were manually corrected using CamScanner. 
-They were then cut off to be in the proper form. Repeating this process over and over is clearly a tedious task, so a simple program was written to automate it.
+this project aim to get national ID code from its images the main problem is that the national ID can be located anywhere on a paper with irrgular size and scale, so here, first try to locate frame of the card, carop it scale and then get the ID numbers.
+
 
 Titles and internal titles : Persian National ID detection 
 ![OCR_me](https://user-images.githubusercontent.com/54494078/206193822-95c7348e-ef3f-405e-8295-ae8050f3e367.jpg)
-
-this project aim to get national ID code from its images the main problem is that the national ID can be located anywhere on a paper with irrgular size and scale, so here, first try to locate frame of the card, carop it scale and then get the ID numbers.
 
 ID number from it after than CNN model predict the national number.
 
