@@ -1,8 +1,6 @@
 # Persian OCR.
-this project aim to get national ID code from its images the main problem is that the national ID can be located anywhere on a paper with irrgular size and scale, so here, first try to locate frame of the card, carop it scale and then get the ID numbers.
+this project aim to get national ID code from its images the main problem is that the national ID can be located anywhere on a paper with irrgular size and scale, so here, first try to locate frame of the card, align it after than cropping the nummber, scale it and then get the ID numbers, beacuase the 
 
-## Motivation of the Project
-this project aim to get national ID code from its images the main problem is that the national ID can be located anywhere on a paper with irrgular size and scale, so here, first try to locate frame of the card, carop it scale and then get the ID numbers.
 
 
 Titles and internal titles : Persian National ID detection 
