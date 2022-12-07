@@ -5,6 +5,10 @@ this project aim to get national ID code from its images. the main problem is th
 
 Titles and internal titles : Persian National ID detection 
 ![OCR_me](https://user-images.githubusercontent.com/54494078/206193822-95c7348e-ef3f-405e-8295-ae8050f3e367.jpg)
+![OCR_3](https://user-images.githubusercontent.com/54494078/206299575-fc1d12c2-2ed8-48f4-a7c1-120481ee449a.jpg)
+
+
+
 
 ID number from it after than CNN model predict the national number.
 
