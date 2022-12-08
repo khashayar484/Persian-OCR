@@ -1,30 +1,27 @@
 # Persian OCR.
-this project aim to get national ID code from its images. the main problem is that the national ID can be located anywhere on a paper with irrgular size and scale, so here, first try to locate frame of the card, align it after than cropping the nummber, scale it and then get the ID numbers, after than predict each number by CNN model.
+this project aim to get national ID code from its images. the main problem is that the national ID can be located anywhere on a paper with irrgular size and scale, so here, first try to locate frame of the card, align it after than cropping the nummber, scale it and then get the ID numbers, after that predict each number by CNN model.
 
 
 
 Titles and internal titles : Persian National ID detection 
-![OCR_me](https://user-images.githubusercontent.com/54494078/206193822-95c7348e-ef3f-405e-8295-ae8050f3e367.jpg)
+
 ![OCR_1](https://user-images.githubusercontent.com/54494078/206299845-3e1d01cf-a29a-4c13-a458-ef120de4c1f7.jpg)
 ![OCR_2 (1)](https://user-images.githubusercontent.com/54494078/206300400-05062a05-e197-4118-b171-b9959e0ed39f.jpg)
 
 
+## Table of contents
 
-ID number from it after than CNN model predict the national number.
+the main processes of predicting ID card mention below.
 
-Introduction - the project's aim
-Technologies
-Launch
+### Frame detection: rotation, get alpha, find
+because images can be located anywhere, first we need to align the frame then crop the ID number based on its location. to do this 
+after inverting the image BGR2GRAY with OpenCv then grab the largest contour which is ID card's frame, align the frame which gets from 
+the conjuction between edge and the center, this method is more precisly than aligning ID card by a it's face.
 
-Consider also using additional elements such as: 
+![OCR_me](https://user-images.githubusercontent.com/54494078/206193822-95c7348e-ef3f-405e-8295-ae8050f3e367.jpg)
 
-#Table of contents
+above image shows one of the sample of ID card locate on paper. the 
 
-. Frame detection: rotation, get alpha, find
-because images can be placed anywhere therfore first we need to align the frame then crop the ID number based on its location. to do this 
-after inverting the image BGR2GRAY with OpenCv then grab the largest contour which is ID card's frame, and align the frame which gets from 
-the conjuction between edge and the center, as i get this method is more precisly than aligning ID card by a face who ID card belong to. especialy when 
-when image of card can be located anywhere in the page.
 . ID detection 
 after grabbing frame and detecting the ID number first scale image and then grab each numbers from ID. inorder to do this the OTSU threshold is used to grab contour 
 from image some flags is implemented to control if the contour is autenticated or not after that, these numbers is used as inputs of CNN model.
