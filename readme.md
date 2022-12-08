@@ -6,7 +6,7 @@ this project aim to get national ID code from its images. the main problem is th
 Titles and internal titles : Persian National ID detection 
 
 ![OCR_1](https://user-images.githubusercontent.com/54494078/206299845-3e1d01cf-a29a-4c13-a458-ef120de4c1f7.jpg)
-![OCR_2 (1)](https://user-images.githubusercontent.com/54494078/206300400-05062a05-e197-4118-b171-b9959e0ed39f.jpg)
+!
 
 
 ## Table of contents
@@ -20,14 +20,19 @@ the conjuction between edge and the center, this method is more precisly than al
 
 ![OCR_me](https://user-images.githubusercontent.com/54494078/206193822-95c7348e-ef3f-405e-8295-ae8050f3e367.jpg)
 
-above image shows one of the sample of ID card locate on paper. the 
+above image shows one of the sample of ID card locate on paper. as you can see a right image shows the input immage and the left one shows the trimed image which show the frame after scaling and cropping.  
 
-. ID detection 
-after grabbing frame and detecting the ID number first scale image and then grab each numbers from ID. inorder to do this the OTSU threshold is used to grab contour 
+[OCR_2 (1)](https://user-images.githubusercontent.com/54494078/206300400-05062a05-e197-4118-b171-b9959e0ed39f.jpg)
+
+some images like above cropped before, so here we need to set autentications for cropping images or not.
+
+### ID detection 
+after grabbing frame and detecting the ID number, we need to get numbers from ID. inorder to do this the OTSU threshold is used to grab contour 
 from image some flags is implemented to control if the contour is autenticated or not after that, these numbers is used as inputs of CNN model.
-. model prediction
+
+### model prediction
 altought some models like AdaBoost, KNN, Bayes with its dimensional reduction, PCA,LDA can get the good result in prediction here CNN models is used and get the 100% 
-accuracy with just afew ID card sample. for better result use another category "10" when model can't predict the number or when the incorrect inputs gets to the network
+accuracy with just afew ID card sample. here we use CNN model with cross entrophy 
 <image accuracy per each epoch >
 <img>  </img>
 the model structure.
