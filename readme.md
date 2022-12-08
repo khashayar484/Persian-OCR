@@ -15,7 +15,7 @@ the conjuction between edge and the center, this method is more precisly than al
 above image shows one of the sample of ID card locate on paper. as you can see a right image shows the input immage and the left one shows the trimed image which show the frame after scaling and cropping.  
 
 ![OCR_1](https://user-images.githubusercontent.com/54494078/206299845-3e1d01cf-a29a-4c13-a458-ef120de4c1f7.jpg)
-[OCR_2 (1)](https://user-images.githubusercontent.com/54494078/206300400-05062a05-e197-4118-b171-b9959e0ed39f.jpg)
+![OCR_2](https://user-images.githubusercontent.com/54494078/206300400-05062a05-e197-4118-b171-b9959e0ed39f.jpg)
 
 some images like above cropped before, so here we need to set autentications for cropping images or not and align the result.
 
