@@ -17,8 +17,6 @@ def prediction_pipeline(directory):
 
         prediction_result = model.predict(face_img)
         classes_x = np.argmax(prediction_result,axis=1)
-        if int(classes_x) == 10:
-            print('---------> delte it')
         prediction_info = prediction_info.append({"prediction" : int(classes_x[0]) , 'distance' : int(file.replace(".jpg" , ""))} , ignore_index = True)
     
     prediction_info = prediction_info.sort_values(by = ['distance'] , ascending=True)
@@ -27,12 +25,3 @@ def prediction_pipeline(directory):
     print('-------> final result is ' , national_id_prediction)
     
     return national_id_prediction
-
-if __name__ == "__main__":
-    base_root = 'data'
-    number_dir = "Number"
-    file_name = "04.jpg"
-    numbers_directory = os.path.join(base_root, number_dir, file_name)
-    print(os.path.join(base_root, number_dir, file_name))
-    national_id_prediction = prediction_pipeline(numbers_directory)
-
