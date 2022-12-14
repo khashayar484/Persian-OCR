@@ -10,7 +10,7 @@ because images can be located anywhere, first we need to align the frame then cr
 after inverting the image BGR2GRAY with OpenCv, grab the largest contour which is ID card's frame, align the frame which gets from 
 the conjuction between edge and the center, this method is more precisly than aligning ID card by a it's face.
 
-<img src="https://user-images.githubusercontent.com/54494078/207532768-998c2398-b4b9-4965-a523-e53b020cbfc8.jpg" width="1100" height="400" align = 'center' >
+<img src="https://user-images.githubusercontent.com/54494078/207532768-998c2398-b4b9-4965-a523-e53b020cbfc8.jpg" width="1100" height="500" align = 'center' >
 
 ![OCR_4 (3)](https://user-images.githubusercontent.com/54494078/207544610-c03b3a0a-c652-487d-85d0-a68fa53360aa.jpg)
 
@@ -28,7 +28,7 @@ from image some flags is implemented to control if the contour is autenticate or
 ### model prediction:
 although some models like AdaBoost, KNN, Bayes with its dimensional reduction like PCA,LDA can get the good result in prediction, but here the CNN model is used and get the 100% accuracy with just afew ID card samples. the model is used with cross entropy loss function because we dealing with classification problem.
 
-<img src="https://user-images.githubusercontent.com/54494078/206301499-babc4d6e-2272-46fb-a5d8-bee076c71a5f.jpg" width="1100" height="400" align = 'center' >
+<img src="https://user-images.githubusercontent.com/54494078/206301499-babc4d6e-2272-46fb-a5d8-bee076c71a5f.jpg" width="1100" height="500" align = 'center' >
 
 above picture illustrates the accuracy and loss for each epoch.
 
