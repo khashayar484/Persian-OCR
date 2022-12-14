@@ -39,6 +39,6 @@ above picture illustrates the accuracy and loss for each epoch.
 ### libraries:
 
 the entire process is visualized in HTML with javascript, ajax is used to transfer base64 images from the server which is flask to the client and vice versa.
-OpenCV and PIL packages are used for image preprocessing in addition to NumPy and also retina-face packages for detecting faces for better alignment.
+OpenCV and PIL packages are used for image preprocessing in addition to NumPy and also retinaface packages for detecting faces for better alignment.
 In the end, Keras is used for implementing the CNN model.
 
