@@ -10,7 +10,6 @@ because images can be located anywhere, first we need to align the frame then cr
 after inverting the image BGR2GRAY with OpenCv, grab the largest contour which is ID card's frame, align the frame which gets from 
 the conjuction between edge and the center, this method is more precisly than aligning ID card by a it's face.
 
-![OCR_me](https://user-images.githubusercontent.com/54494078/206193822-95c7348e-ef3f-405e-8295-ae8050f3e367.jpg)
 ![OCR_1 (2)](https://user-images.githubusercontent.com/54494078/207532768-998c2398-b4b9-4965-a523-e53b020cbfc8.jpg)
 ![OCR_2 (7)](https://user-images.githubusercontent.com/54494078/207533646-b9dc6f90-a123-49ed-a382-ed430f46f5ab.jpg)
 
