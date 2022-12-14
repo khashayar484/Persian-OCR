@@ -31,7 +31,7 @@ def get_numbers(original_image, contour ,number_directory):
         area = w*h
         distance =+ cX
         
-        if area > 1500 and area < 8500:
+        if area > 1000 and area < 8500:
             ROI = cv2.resize(ROI , (100,250))
             im = Image.fromarray(ROI)
             im.save(os.path.join(number_directory , f"{str(int(distance))}.jpg"), quality=100, subsampling=0)
