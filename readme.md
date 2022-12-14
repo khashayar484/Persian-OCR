@@ -11,7 +11,7 @@ after inverting the image BGR2GRAY with OpenCv, grab the largest contour which i
 the conjuction between edge and the center, this method is more precisly than aligning ID card by a it's face.
 
 ![OCR_1 (2)](https://user-images.githubusercontent.com/54494078/207532768-998c2398-b4b9-4965-a523-e53b020cbfc8.jpg)
-![OCR_2 (7)](https://user-images.githubusercontent.com/54494078/207533646-b9dc6f90-a123-49ed-a382-ed430f46f5ab.jpg)
+![OCR_2 (7)](https://user-images.githubusercontent.com/54494078/207542106-6011eb79-9895-4ebe-bd67-1904e35a96ab.jpg)
 
 above image shows one of the sample of ID card locate on paper. as you can see a right image shows the input image and the left one shows the trim image which shows the frame after scaling and cropping.  
 ![OCR_3 (1)](https://user-images.githubusercontent.com/54494078/207532858-57130dcc-3545-4270-869a-d44a1c41398d.jpg)
