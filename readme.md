@@ -9,8 +9,8 @@ the main processes of predicting ID card is mention below.
 because images can be located anywhere, first we need to align the frame then crop the ID number based on its location. to do this 
 after inverting the image BGR2GRAY with OpenCv, grab the largest contour which is ID card's frame, align the frame which gets from 
 the conjuction between edge and the center, this method is more precisly than aligning ID card by a it's face.
-<img src="https://user-images.githubusercontent.com/54494078/207532768-998c2398-b4b9-4965-a523-e53b020cbfc8.jpg" width="500" height="400" align = 'center' >
-<img src="https://user-images.githubusercontent.com/54494078/207542106-6011eb79-9895-4ebe-bd67-1904e35a96ab.jpg" width="500" height="400" align = 'center' >
+<img src="https://user-images.githubusercontent.com/54494078/207532768-998c2398-b4b9-4965-a523-e53b020cbfc8.jpg" width="800" height="400" align = 'center' >
+<img src="https://user-images.githubusercontent.com/54494078/207542106-6011eb79-9895-4ebe-bd67-1904e35a96ab.jpg" width="800" height="400" align = 'center' >
 ![OCR_1 (2)](https://user-images.githubusercontent.com/54494078/207532768-998c2398-b4b9-4965-a523-e53b020cbfc8.jpg width="500" height="400" align = 'center')
 ![OCR_2 (7)](https://user-images.githubusercontent.com/54494078/207542106-6011eb79-9895-4ebe-bd67-1904e35a96ab.jpg width="500" height="400" align = 'center')
 
