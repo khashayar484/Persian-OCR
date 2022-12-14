@@ -15,8 +15,6 @@ the conjuction between edge and the center, this method is more precisly than al
 ![OCR_4 (3)](https://user-images.githubusercontent.com/54494078/207544610-c03b3a0a-c652-487d-85d0-a68fa53360aa.jpg)
 
 
-<img src="https://user-images.githubusercontent.com/54494078/207542106-6011eb79-9895-4ebe-bd67-1904e35a96ab.jpg" width="1100" height="600" align = 'center' >
-
 above image shows one of the sample of ID card locate on paper. as you can see a right image shows the input image and the left one shows the trim image which shows the frame after scaling and cropping.  
 
 <img src="https://user-images.githubusercontent.com/54494078/207532858-57130dcc-3545-4270-869a-d44a1c41398d.jpg" width="1100" height="600" align = 'center' >
