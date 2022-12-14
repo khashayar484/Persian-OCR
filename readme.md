@@ -10,11 +10,11 @@ because images can be located anywhere, first we need to align the frame then cr
 after inverting the image BGR2GRAY with OpenCv, grab the largest contour which is ID card's frame, align the frame which gets from 
 the conjuction between edge and the center, this method is more precisly than aligning ID card by a it's face.
 
-![OCR_1 (2)](https://user-images.githubusercontent.com/54494078/207532768-998c2398-b4b9-4965-a523-e53b020cbfc8.jpg)
-![OCR_2 (7)](https://user-images.githubusercontent.com/54494078/207542106-6011eb79-9895-4ebe-bd67-1904e35a96ab.jpg)
+![OCR_1 (2)](https://user-images.githubusercontent.com/54494078/207532768-998c2398-b4b9-4965-a523-e53b020cbfc8.jpg width="500" height="400" align = 'center')
+![OCR_2 (7)](https://user-images.githubusercontent.com/54494078/207542106-6011eb79-9895-4ebe-bd67-1904e35a96ab.jpg width="500" height="400" align = 'center')
 
 above image shows one of the sample of ID card locate on paper. as you can see a right image shows the input image and the left one shows the trim image which shows the frame after scaling and cropping.  
-![OCR_3 (1)](https://user-images.githubusercontent.com/54494078/207532858-57130dcc-3545-4270-869a-d44a1c41398d.jpg)
+![OCR_3 (1)](https://user-images.githubusercontent.com/54494078/207532858-57130dcc-3545-4270-869a-d44a1c41398d.jpg width="500" height="400" align = 'center')
 
 some images like above cropped before, so here we need to set autentications for cropping images or not, then align the result.
 
@@ -25,7 +25,7 @@ from image some flags is implemented to control if the contour is autenticate or
 ### model prediction:
 although some models like AdaBoost, KNN, Bayes with its dimensional reduction like PCA,LDA can get the good result in prediction, but here the CNN model is used and get the 100% accuracy with just afew ID card samples. the model is used with cross entropy loss function because we dealing with classification problem.
 
-![Capture](https://user-images.githubusercontent.com/54494078/206301499-babc4d6e-2272-46fb-a5d8-bee076c71a5f.jpg)
+![Capture](https://user-images.githubusercontent.com/54494078/206301499-babc4d6e-2272-46fb-a5d8-bee076c71a5f.jpg width="500" height="400" align = 'center')
 
 above picture illustrates the accuracy and loss for each epoch.
 
