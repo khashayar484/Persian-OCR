@@ -2,6 +2,12 @@
 
 This project aims to get a national ID code from its images. the main problem is that the national ID can be located anywhere on a paper with irregular size and scale, so here, first try to locate the frame of the card, align it after cropping the number, scale it and then get the ID numbers, after that predict each number by CNN model.
 
+## Demo
+
+
+https://user-images.githubusercontent.com/54494078/224530905-f612666d-97f6-41f7-a7c7-85825e5bb01d.mp4
+
+
 ## Table of contents:
 
 The main processes of predicting ID card is mentioned below.
